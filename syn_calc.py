@@ -28,7 +28,6 @@ dependency_parser = StanfordDependencyParser(path_to_jar = path_to_jar, path_to_
 
 
 # Synonyms
-# to Fernando: Should I output this into a .txt file?
 syn_01 = []
 syn_01.append(['average', ['mean', 'avg']])
 syn_01.append(['max', ['top', 'best', 'highest', 'maximum']])
@@ -49,9 +48,6 @@ syn_01.append(['assignment1 assignment2 assignment3', ['assignments 1 to 3', 'as
 syn_01.append(['assignment2 assignment3', ['assignments 2 and 3', 'assignments 2 to 3', 'assignments 2-3', 'assignments two to three']])
 syn_01.append(['assignment1 assignment2 assignment3 assignment4', ['assignments 1 to 4', 'assignments 1-4', 'first four assignments', 'first 4 assignments']])
 syn_01.append(['assignment1 assignment2 assignment 3 assignment5', ['assignments 1 to 5', 'assignments 1-5', 'all assignments', '5 assignments', 'five assignments']])
-
-
-# In[7]:
 
 
 # Synonyms Substitution
