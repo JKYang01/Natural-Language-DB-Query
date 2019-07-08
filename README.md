@@ -34,3 +34,17 @@ Answer generation which feed back a certain number
 
 Stanford Dependency Parser: Powered by a neural network, the parser outputs typed dependencies between words on a sentence.
 ![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+
+Synonyms Substitution: users may refer to the same concept using different words or expressions. Synonym substitution should process the question to extract meaning from groups of words (bigrams, trigrams) and transform them to make it easier for the system to understand them.
+
+What is the average score on assignment 1 / What is the mean for assignment 1? average = mean
+
+What is Julie`s score for assignments 1 and 2? / What is Julie`s score for the first two assignments?
+
+assignments 1 and 2 = first two assignments = assignment1 assignment2
+
+NLTK Chunk Package: A processing interface to identify non-overlapping groups in unrestricted text. 
+Typically, chunk parsers are used to find base syntactic constituents, such as base noun phrases.
+![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+
+
