@@ -20,35 +20,35 @@ How to translate natural language question into a structured database query and 
 
 The solution we found is:
 
-Build the Database with certain structure
+1. Build the Database with certain structure
 
-Question Parsing depend on the query pattern and transfer into SQL query
+2. Question Parsing depend on the query pattern and transfer into SQL query
 
-Data retrieving: finding and calculating with SQL query
+3. Data retrieving: finding and calculating with SQL query
 
-Answer generation which feed back a certain number 
+4. Answer generation which feed back a certain number  (Ideally it should feed back with a full sentence and this step will be improved)
 
-(Ideally it should feed back with a full sentence and this step will be improved)
+## The core NLP design of this project
 
-### NLP Techniques in this project
+### NLP Techniques in this project 
 
-##### Stanford Dependency Parser: 
+#### 1. Stanford Dependency Parser: 
 Powered by a neural network, the parser outputs typed dependencies between words on a sentence.
 ![alt text](https://github.com/JKYang01/Natural-Language-DB-Query/blob/master/pictures/DEPEENCY_PARSER.png)
 
-###### Synonyms Substitution: 
+##### 2. Synonyms Substitution: 
 users may refer to the same concept using different words or expressions. Synonym substitution should process the question to extract meaning from groups of words (bigrams, trigrams) and transform them to make it easier for the system to understand them.
 
 What is the average score on assignment 1 / What is the mean for assignment 1? average = mean
 What is Julie's score for assignments 1 and 2? / What is Julie's score for the first two assignments?
 assignments 1 and 2 = first two assignments = assignment1 assignment2
 
-##### NLTK Chunk Package: 
+#### 3. NLTK Chunk Package: 
 A processing interface to identify non-overlapping groups in unrestricted text. 
 Typically, chunk parsers are used to find base syntactic constituents, such as base noun phrases.
 ![alt text](https://github.com/JKYang01/Natural-Language-DB-Query/blob/master/pictures/NLP_CHUNKER1.png)
 
-##### StanfordCoreNLP Constituency  Parser:  
+##### 4. StanfordCoreNLP Constituency  Parser:  
 Provides full syntactic analysis, minimally a constituency parse of sentences.
 Indicate the sub-sentence of a matrix sentence or phrase with the tag of “SBAR” .
 It helps to identify the character of PrepositonPhrase_Clause and WHQuery_Clause.
@@ -58,7 +58,7 @@ It helps to identify the character of PrepositonPhrase_Clause and WHQuery_Clause
 We use the NLP techneques above to do the preprocessing of sentence and extract the keywords and generate the SQL query
 according to sentence structure and the key words.
 
-#### Sentence Parser 
+#### 1. Sentence Parser 
 The sentence parser include two steps:
 1. Sentence detector: find the complex sentence 
 2. Sentence spliter: split the complex sentence into simple ones and send to the next step
@@ -116,7 +116,7 @@ def split_pp(self,tags):   # ertract the matix PP
                 chunks.append(chunk.strip())
         return chunks[-1]
 ```
-#### Translater 
+#### 2. Translater 
 Using the dependency paser and generate SQL query by the corrdination of SQL command and grammatical component
 1. preprosess the key words in sentence with synonym subsititution
 2. using dependet paser and transfer into SQL query
