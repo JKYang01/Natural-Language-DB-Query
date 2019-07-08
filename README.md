@@ -39,7 +39,7 @@ Synonyms Substitution: users may refer to the same concept using different words
 
 What is the average score on assignment 1 / What is the mean for assignment 1? average = mean
 
-What is Julie`s score for assignments 1 and 2? / What is Julie`s score for the first two assignments?
+What is Julie's score for assignments 1 and 2? / What is Julie's score for the first two assignments?
 
 assignments 1 and 2 = first two assignments = assignment1 assignment2
 
@@ -47,4 +47,8 @@ NLTK Chunk Package: A processing interface to identify non-overlapping groups in
 Typically, chunk parsers are used to find base syntactic constituents, such as base noun phrases.
 ![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 
+StanfordCoreNLP Constituency  Parser:  
+Provides full syntactic analysis, minimally a constituency parse of sentences.
+Indicate the sub-sentence of a matrix sentence or phrase with the tag of “SBAR” .
+It helps to identify the character of PP_Clause and WH_Clause. 
 
