@@ -1,4 +1,14 @@
 # Natural-Language-DB-Query
+
+Notes from 2025 Jan: 
+** This is my course project during my Master program. I attribute the the sentence parser development. 
+At that time I just began my journey of being a developer and it is my first NLP project.
+The SQL part and the archetecture was designed by my classmate Fernando. ( Fernando, if you see it please conatct me )**
+
+
+The method I was using is depends on the linguistic structure and using Stanford NLP tool to parse out the elements of sentences. At that time GPT4 was not there yet. 
+It is a pretty fun project and what we did is a potential way of processing natual language to another command language. 
+
 Querying a database structure using natural language questions and answer - QA - system. 
 
 Examples: 
